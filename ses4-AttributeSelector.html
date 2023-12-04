@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การเลือกทุกเอลิมเนต์ด้วย Attribute Selector</title>
+    <style>
+        h2[title="aTitle"]{
+            color: maroon;
+        }
+       img{
+        height: 200px;
+       }
+       img.pic1[alt]{
+        border: solid blue 2px;
+       }
+       h3[title~=title]{
+              color:hotpink ;
+       }
+       h3[title~=job]{
+              font-style: italic;
+       }
+       h3[title~=joy]{
+              text-decoration: underline;
+       }
+       p[lang|="en"]{
+           background-color: blueviolet;
+       }
+       a[href^=https]{
+           background-image: url(arrow.png);
+           background-repeat: on-repeat ;
+           background-position: right;
+           padding-right: 30px;
+       }
+    </style>
+</head>
+<body>
+    <h1><center>การเลือกทุกเอลิมเนต์ด้วย Attribute Selector</center></h1>
+    <h2 title="aTitle"> Attribute ชื่อ atitle</h2>
+    <h2 title="firstTitle">มี Attribute ชื่อ title</h2>
+    <h1><center>การใช้งาน attribute Selector</center></h1>
+    <div>
+        <article>
+            <h2>First Set</h2>
+            <img class="pic1" src="img/images.jpg" alt="dogmai">
+            <img class="pic2" src="img/google.png" alt="google">
+            <img class="pic3" src="" alt="">
+        </article>
+        <hr>
+        <article>
+            <h2>First Set</h2>
+            <img class="pic4" src="img/images (1).jpg" alt="วิวสวยๆ">
+            <img class="pic5" src="" alt
+            <img class="pic6" src="" alt="">
+        </article>
+    </div>
+    <h3 title="title job joy">ตัวที่1 ทดสอบการใช้งาน Attribute~=value</h3>
+    <h3 title="job">ตัวที่2 ทดสอบการใช้งาน Attribute~=value</h3>
+    <h3 title="joy">ตัวที่3 ทดสอบการใช้งาน Attribute~=value</h3>
+    <div>
+        <p lang="en">Hello</p>
+        <p lang="en-us">Hi</p>
+        <p lang="es">Hola</p>
+        <p lang="Lt">สวัสดี</p>
+    </div>
+    <h2><center>การใช้งาน Attribute^=value</center></h2>
+    <ul>
+        <li><a href="https://www.google.co.th">กูเกื้ล</a></li>
+        <li><a href="https://www.apple.com">แอปเปิ้ล</a></li>
+        <li><a href="http://www.microsoft.com">ไมโครซอฟด์</a></li>
+    </ul>
+</body>
+</html>
