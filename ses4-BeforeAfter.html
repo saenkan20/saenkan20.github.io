@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การเลือกทุกเอลิมเนต์ด้วย pseudo-element Before | After</title>
+    <style>
+       #mainDiv{
+        background-color: rgb(231, 221, 221);
+        width: 480px;
+        text-align: justify;
+        padding: 10px 10px 10px 10px;      
+     }
+       p{
+        padding: 10px 10px 5px 5px;
+       }
+       p.warning::before{
+        content: "ข้อคควรระวัง : ";
+       }
+       p.warning{
+        color: orangered;
+        font-style: italic;
+        font-size: 0.9em;
+       }
+    </style>
+</head>
+<body>
+    <h1>การเลือกทุกเอลิมเนต์ด้วย pseudo-element Before | After</h1>
+    <div id="mainDiv">
+        <article>
+            <h2>สินค้าใหม่</h2>
+            <p>
+                เครื่องดื่มชูกำลังตรา Goodbye
+            </p>
+            <p class="warning">
+                ไม่ควรซดเกินวันละครึ่งขวด
+            </p>
+        </article>
+    </div>
+</body>
+</html>
